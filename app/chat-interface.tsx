@@ -1,9 +1,8 @@
 'use client'
 
 import { useRef, useEffect } from 'react'
-import { Send, Loader2, User, Sparkles, FileText, Plus, Copy, RefreshCw, Check } from 'lucide-react'
+import { Send, Loader2, Sparkles, FileText, Plus, Copy, RefreshCw, Check } from 'lucide-react'
 import { useState } from 'react'
-import { Button } from '@/components/ui/button'
 import { Textarea } from '@/components/ui/textarea'
 import { SearchResult } from './types'
 import { type Message } from 'ai'
