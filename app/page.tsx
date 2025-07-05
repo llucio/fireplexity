@@ -28,7 +28,7 @@ export default function FireplexityPage() {
   const [, setIsCheckingEnv] = useState<boolean>(true)
   const [pendingQuery, setPendingQuery] = useState<string>('')
 
-  const { messages, input, handleInputChange, handleSubmit, isLoading, data } = useChat({
+  const { messages, input, handleInputChange, handleSubmit, status, data } = useChat({
     api: '/api/fireplexity/search',
     body: {
       ...(firecrawlApiKey && { firecrawlApiKey })
@@ -203,6 +203,7 @@ export default function FireplexityPage() {
   }
 
   const isChatActive = hasSearched || messages.length > 0
+  const isLoading = status === 'streaming' || status === 'submitted';
 
   return (
     <div className="min-h-screen flex flex-col">

@@ -120,10 +120,6 @@ export function ChatInterface({ messages, sources, followUpQuestions, searchStat
 
   return (
     <div className="flex flex-col h-full relative" style={{ height: 'calc(100vh - 80px)' }}>
-      {/* Top gradient overlay */}
-      <div className="absolute top-0 left-0 right-0 h-12 bg-gradient-to-b from-white to-transparent dark:from-zinc-900 dark:to-transparent pointer-events-none z-10" />
-      
-      
       {/* Main content area */}
       <div 
         ref={scrollContainerRef}
@@ -598,7 +594,7 @@ export function ChatInterface({ messages, sources, followUpQuestions, searchStat
       </div>
 
       {/* Fixed input at bottom */}
-      <div className="fixed bottom-0 left-0 right-0 bg-gradient-to-t from-white via-white/95 dark:from-zinc-900 dark:via-zinc-900/95 to-transparent pt-6 pb-6 z-10">
+      <div className="fixed bottom-0 left-0 right-0 pt-6 pb-6">
         <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
           <form onSubmit={handleFormSubmit} ref={formRef}>
             <div className="bg-white dark:bg-zinc-800 rounded-2xl shadow-xl border border-gray-200 dark:border-gray-700 p-3 focus-within:border-gray-900 dark:focus-within:border-gray-100 transition-colors">
@@ -613,7 +609,7 @@ export function ChatInterface({ messages, sources, followUpQuestions, searchStat
                     }
                   }}
                   placeholder="Ask a follow-up question..."
-                  className="resize-none border-0 focus:ring-0 focus:outline-none bg-transparent placeholder:text-gray-400 dark:placeholder:text-gray-500 px-4 py-2 pr-2 shadow-none focus-visible:ring-0 focus-visible:border-0"
+                  className="resize-none border-0 focus:ring-0 focus:outline-none bg-transparent placeholder:text-gray-400 dark:placeholder:text-gray-500 px-4 py-2 pr-2 shadow-none focus-visible:ring-0 focus-visible:border-0 text-gray-900 dark:text-white"
                   rows={1}
                   style={{
                     minHeight: '36px',
